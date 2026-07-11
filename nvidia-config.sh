@@ -10,6 +10,6 @@ chmod 644 /etc/dracut.conf.d/nvidia.conf
 # Forzar carga de nvidia al inicio
 mkdir -p /etc/modules-load.d
 echo "nvidia" > /etc/modules-load.d/nvidia.conf
-xbps-install -S linux6.18
+xbps-install -Sy linux6.18 linux6.18-headers
 xbps-reconfigure -f -a
 grub-mkconfig -o /boot/grub/grub.cfg
