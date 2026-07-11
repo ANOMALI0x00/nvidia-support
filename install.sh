@@ -2,16 +2,16 @@
 390(){
 xbps-install -Sy mesa-dri mesa-dri-32bit nvidia390-opencl nvidia390-libs\
  nvidia390-gtklibs nvidia390-dkms nvidia390 nvidia390-opencl-32bit \
- nvidia390-libs-32bit nvidia390-gtklibs-32bit nvtop \ 
- && wget -O /tmp/nvi.sh https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/nvidia-config.sh \
- && chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
+ nvidia390-libs-32bit nvidia390-gtklibs-32bit nvtop 
+wget -O /tmp/nvi.sh https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/nvidia-config.sh 
+chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
 }
 470(){
-pkexec xbps-install -Sy mesa-dri mesa-dri-32bit \
+xbps-install -Sy mesa-dri mesa-dri-32bit \
 nvidia470-opencl nvidia470-libs nvidia470-gtklibs nvidia470-dkms nvidia470 \
-nvidia470-libs-32bit \
-&& wget -O /tmp/nvi.sh https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/nvidia-config.sh \
-&&  chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
+nvidia470-libs-32bit 
+wget -O /tmp/nvi.sh https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/nvidia-config.sh 
+chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
 }
 580(){
 pkexec xbps-install -Sy mesa-dri mesa-dri-32bit nvidia580 nvidia580-dkms nvidia580-firmware nvidia580-gtklibs nvidia580-libs nvidia580-opencl nvidia580-libs-32bit && pkexec wget -O /tmp/nvi.sh https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/nvidia-config.sh && pkexec chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
