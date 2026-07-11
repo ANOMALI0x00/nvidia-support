@@ -22,7 +22,7 @@ chmod +x /tmp/nvi.sh && /tmp/nvi.sh
 latest(){
 pkexec xbps-install -Sy mesa-dri mesa-dri-32bit nvidia nvidia-dkms \
  nvidia-firmware nvidia-gtklibs nvidia-gtklibs-32bit nvidia-libs nvidia-libs-32bit \
-nvidia-opencl nvidia-opencl-32bit nvidia-vaapi-driver nvidia-docker nvidia-container-toolkit 
+ nvidia-opencl nvidia-opencl-32bit nvidia-vaapi-driver nvidia-docker nvidia-container-toolkit 
 wget -O /tmp/nvi.sh https://codeberg.org/Neko-Void/nvidia-support/raw/branch/main/nvidia-config.sh
 chmod +x /tmp/nvi.sh && pkexec /tmp/nvi.sh
 }
