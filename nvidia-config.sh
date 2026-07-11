@@ -1,6 +1,6 @@
 #! /bin/bash
 rm -rf /etc/default/grub
-wget -O /etc/default/grub https://codeberg.org/javiercplus/Neko-Wizard/releases/download/nvidia/grub
+wget -O /etc/default/grub https://codeberg.org/Neko-Void/nvidia-support/raw/branch/main/grub
 mkdir -p /etc/dracut.conf.d
 cat << 'EOFDRACUT' > /etc/dracut.conf.d/nvidia.conf
 #Incluir los módulos esenciales de NVIDIA en el initramfs
