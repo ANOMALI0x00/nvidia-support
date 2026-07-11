@@ -15,6 +15,9 @@ open(){
 pkexec xbps-install -Sy mesa-dri mesa-dri-32bit mesa-vulkan-intel mesa-vulkan-intel-32bit linux-firmware-intel libva-intel-driver intel-media-driver mesa-intel-dri-32bit mesa-intel-dri
 }
 case "$@" in
-  390)390
-  ;;
+  390)390 ;;
+  470)470 ;;
+  580)580 ;;
+  latest)latest ;;
+  open)open ;;
 esac
