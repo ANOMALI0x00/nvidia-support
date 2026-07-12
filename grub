@@ -1,7 +1,7 @@
 #
 # Configuration file for GRUB.
 #
-GRUB_DEFAULT="Neko Void GNU/Linux, with Linux 6.18"
+GRUB_DEFAULT="Neko Void GNU/Linux, with Linux 6.18.38_1"
 #GRUB_HIDDEN_TIMEOUT=0
 #GRUB_HIDDEN_TIMEOUT_QUIET=false
 GRUB_TIMEOUT=5
