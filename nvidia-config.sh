@@ -12,7 +12,7 @@ mkdir -p /etc/modules-load.d
 echo "nvidia" > /etc/modules-load.d/nvidia.conf
 xbps-install -Sy linux6.18 linux6.18-headers
 xbps-reconfigure -f -a
-#for kernel in /usr/lib/modules/*; do sudo dkms install -m nvidia -k $(basename "$kernel"); done
+#NVIDIA_VER=$(ls /usr/src | grep -m1 '^nvidia-' | sed 's/nvidia-//'); for kernel in /usr/lib/modules/*; do sudo dkms install -m nvidia -v "$NVIDIA_VER" -k $(basename "$kernel"); done
 kernel_set(){
 # ==========================================
 # Configuración
