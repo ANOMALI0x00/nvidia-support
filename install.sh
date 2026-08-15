@@ -14,13 +14,13 @@ wget -O /tmp/nvi.sh https://codeberg.org/Neko-Void/nvidia-support/raw/branch/mai
 chmod +x /tmp/nvi.sh && /tmp/nvi.sh
 }
 580(){
-pkexec xbps-install -Sy mesa-dri mesa-dri-32bit nvidia580 nvidia580-dkms nvidia580-firmware nvidia580-gtklibs \
+xbps-install -Sy mesa-dri mesa-dri-32bit nvidia580 nvidia580-dkms nvidia580-firmware nvidia580-gtklibs \
  nvidia580-libs nvidia580-opencl nvidia580-libs-32bit SDL2-32bit SDL2 libGL-32bit
 wget -O /tmp/nvi.sh https://codeberg.org/Neko-Void/nvidia-support/raw/branch/main/nvidia-config.sh
 chmod +x /tmp/nvi.sh && /tmp/nvi.sh
 }
 latest(){
-pkexec xbps-install -Sy mesa-dri mesa-dri-32bit nvidia nvidia-dkms \
+xbps-install -Sy mesa-dri mesa-dri-32bit nvidia nvidia-dkms \
  nvidia-firmware nvidia-gtklibs nvidia-gtklibs-32bit nvidia-libs nvidia-libs-32bit \
  nvidia-opencl nvidia-opencl-32bit nvidia-vaapi-driver nvidia-docker nvidia-container-toolkit SDL2-32bit SDL2 libGL-32bit
 wget -O /tmp/nvi.sh https://codeberg.org/Neko-Void/nvidia-support/raw/branch/main/nvidia-config.sh
