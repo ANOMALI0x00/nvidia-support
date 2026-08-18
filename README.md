@@ -108,7 +108,7 @@ export WLR_NO_HARDWARE_CURSORS=1  # If you experience flickering
 To completely uninstall a driver, use `xbps-remove` to remove the packages. For example, for the 470 driver:
 
 ```bash
-sudo xbps-remove nvidia470 nvidia470-libs nvidia470-opencl
+sudo xbps-remove nvidia(Version) nvidia(Version)-libs nvidia(Version)-opencl
 # Remove configuration files if necessary:
 sudo rm -rf /etc/modprobe.d/nvidia.conf /etc/modules-load.d/nvidia.conf
 sudo rm -rf /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
