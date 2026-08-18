@@ -48,6 +48,10 @@ EOFUDEV
 # FORZAR USO DE NVIDIA EN TODO EL ENTORNO GRÁFICO (Xorg)
 mkdir -p /etc/X11/xorg.conf.d
 cat << 'EOFXORG' > /etc/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
+Section "Module"
+    Load "glx"
+EndSection
+
 Section "OutputClass"
     Identifier "nvidia"
     MatchDriver "nvidia-drm"
@@ -67,8 +71,9 @@ chmod +x /usr/local/bin/nvidia-run
 cat << 'EOFWAYLAND' > /etc/profile.d/nvidia-wayland.sh
 # Forzar EGL y GLX en NVIDIA para Wayland y X11 globalmente
 export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
-export __NV_PRIME_RENDER_OFFLOAD=1
-export __GLX_VENDOR_LIBRARY_NAME=nvidia
+# Las siguientes líneas son solo para laptops con Optimus. En PC de escritorio deben estar comentadas.
+# export __NV_PRIME_RENDER_OFFLOAD=1
+# export __GLX_VENDOR_LIBRARY_NAME=nvidia
 # Descomentar la siguiente línea si usas un compositor wlroots (Sway/Hyprland) y tienes parpadeo
 # export WLR_NO_HARDWARE_CURSORS=1
 EOFWAYLAND
